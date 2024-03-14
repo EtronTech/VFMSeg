@@ -2,7 +2,7 @@
 # Code Samples
 
 ## VFMs
-We use released official code of SAM[Segment Anything] and SEEM[Segment Everything Everywhere All at Once] including their checkpoints (`sam_vit_h_4b8939.pth` for SAM, `seem_focall_v1.pt` for SEEM) for building our VFMSeg pipeline.
+We use released official code of [SAM](https://segment-anything.com/) and [SEEM](https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once) including their checkpoints (`sam_vit_h_4b8939.pth` for SAM, `seem_focall_v1.pt` for SEEM) for building our VFMSeg pipeline.
 
 The code of SEEM model is modified to adapt to output pixel-wise logits.
 
@@ -10,42 +10,50 @@ The code of SEEM model is modified to adapt to output pixel-wise logits.
 The process of pre-training 2D and 3D networks is similar to xMUDA method, the last checkpoint of those models are utilized for generating pseudo-labels.
 
 test.py 					-- predict pseudo-labels or validate (test) performance.
+
 trial_vfm.py				-- generate VFM guided pseudo-labels.
+
 train_xmuda_with_VFM_mix.py -- training with VFMSeg and FrustrumMixing.
-generate_masks_with_VFMs.py -- generate masks beforehand to avoid online calling of VFMs. 
-							   `pre_defined_proc_list` 	variable defines the dataset to be utilized.
+
+generate_masks_with_VFMs.py -- generate masks beforehand to avoid online calling of VFMs.`pre_defined_proc_list` 	variable defines the dataset to be utilized.
 
 cmd.txt						-- sample commands for initiating training process.
 
 train_baseline.py			-- training script provid by xMUDA method for baseline model.
-train_xmuda.py				-- training script provid by xMUDA method for training xMUDA models.and pre-training 2D
-							   and 3D models.
+
+train_xmuda.py				-- training script provid by xMUDA method for training xMUDA models.and pre-training 2D and 3D models.
 
 ## Configurations
 ..\configs       directory stores configuration files for xMUDA baseline.
 ..\VFM\configs   directory stores configuration files for our method.
 
 ## Main Results
-Ours (VFM-PL + FrustrumMixing)	    2D	 	3D	    Avg.
-A2D2/SemanticKITTI				|  45.0	|  52.3  |	50.0  |
-VirualKITTI/SemanticKITTI		|  57.2 |  52.0  |  61.0  |
-nuScenesLidarseg:USA/Singapore	|  70.0 |  65.6  |  72.3  |
-nuScenesLidarseg:Day/Night		|  60.6 |  70.5  |  66.5  |
+|Ours (VFM-PL + FrustrumMixing)	|   2D	|	3D	 |  Avg.  
+| --- | --- | --- | --- 
+|A2D2/SemanticKITTI				|  45.0	|  52.3  |	50.0  
+|VirualKITTI/SemanticKITTI		|  57.2 |  52.0  |  61.0  
+|nuScenesLidarseg:USA/Singapore	|  70.0 |  65.6  |  72.3  
+|nuScenesLidarseg:Day/Night		|  60.6 |  70.5  |  66.5  
 
-xMUDA-PL     						2D	 	3D	    Avg.
-A2D2/SemanticKITTI				|  41.2	|  49.8  |	47.5  |
-VirualKITTI/SemanticKITTI		|  38.7 |  46.1  |  45.0  |
-nuScenesLidarseg:USA/Singapore	|  65.6 |  63.8  |  68.4  |
-nuScenesLidarseg:Day/Night		|  57.6 |  69.6  |  64.4  |
+|xMUDA-PL     					|   2D	|	3D	 |  Avg.  
+| --- | --- | --- | --- 
+|A2D2/SemanticKITTI				|  41.2	|  49.8  |	47.5  
+|VirualKITTI/SemanticKITTI		|  38.7 |  46.1  |  45.0  
+|nuScenesLidarseg:USA/Singapore	|  65.6 |  63.8  |  68.4  
+|nuScenesLidarseg:Day/Night		|  57.6 |  69.6  |  64.4  
 
-Oracle      						2D	 	3D	    Avg.
-A2D2/SemanticKITTI				|  59.3	|  71.9  |	73.6  |
-VirualKITTI/SemanticKITTI		|  66.3 |  78.4  |  80.1  |
-nuScenesLidarseg:USA/Singapore	|  75.4 |  76.0  |  79.6  |
-nuScenesLidarseg:Day/Night		|  61.5 |  69.8  |  69.2  |
+|Oracle      					|   2D	|	3D	 |  Avg.  
+| --- | --- | --- | --- 
+|A2D2/SemanticKITTI				|  59.3	|  71.9  |	73.6  
+|VirualKITTI/SemanticKITTI		|  66.3 |  78.4  |  80.1  
+|nuScenesLidarseg:USA/Singapore	|  75.4 |  76.0  |  79.6  
+|nuScenesLidarseg:Day/Night		|  61.5 |  69.8  |  69.2  
 
 ## xMUDA Code
-Official code for the xMUDA journal paper which builds on the code from the conference paper.
+We would like to thank for authors who kindly share their code:
+[Cross-modal Learning for Domain Adaptation in 3D Semantic Segmentation](https://arxiv.org/abs/2101.07253)  
+ [Maximilian Jaritz](https://team.inria.fr/rits/membres/maximilian-jaritz/), [Tuan-Hung Vu](https://tuanhungvu.github.io/), [Raoul de Charette](https://team.inria.fr/rits/membres/raoul-de-charette/),  Émilie Wirbel, [Patrick Pérez](https://ptrckprz.github.io/)  
+
 
 ## Preparation
 ### Prerequisites
