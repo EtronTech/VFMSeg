@@ -55,6 +55,8 @@ We would like to thank for authors who kindly share their code:
  [Maximilian Jaritz](https://team.inria.fr/rits/membres/maximilian-jaritz/), [Tuan-Hung Vu](https://tuanhungvu.github.io/), [Raoul de Charette](https://team.inria.fr/rits/membres/raoul-de-charette/),  Émilie Wirbel, [Patrick Pérez](https://ptrckprz.github.io/)  
 
 
+The following sections are useful instructions extracted from their README.md file.
+
 ## Preparation
 ### Prerequisites
 Tested with
