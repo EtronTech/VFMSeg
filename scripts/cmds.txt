@@ -1,0 +1,18 @@
+1. Pre-training 2D and 3D nets (obtain last checkpoints):
+
+python train_xmuda.py --cfg=../configs/nuscenes_lidarseg/usa_singapore/uda/xmuda.yaml
+
+
+2. Generate VFM-PL (utilize last checkpoints and VFM):
+python trial_VFM.py --cfg=../configs/nuscenes_lidarseg/usa_singapore/uda/xmuda_pl.yaml --vfmlab --vfm_pth=/Labs/Scripts/3DPC/xMUDA/VFM_ckpt/seem_focall_v1.pt --vfm_cfg=../VFM/configs/seem/seem_focall_lang.yaml --pselab @/XMUDA-model_2d_100000.pth @/XMUDA-model_3d_100000.pth DATASET_TARGET.TEST "('train_singapore',)"
+
+
+3.Initiate VFM-PL and FrustrumMixing Training Process on Remote Severs:
+
+python train_xmuda_with_VFM_mix.py --cfg=../VFM/configs/a2d2_semantic_kitti/xmuda_vfm_pl.yaml > training_logs/log_a2d2_train_start_0000.txt 2>&1 &
+
+python train_xmuda_with_VFM_mix.py --cfg=../VFM/configs/virtual_kitti_semantic_kitti/xmuda_vfm_pl.yaml > training_logs/log_vk_train_start_0000.txt 2>&1 &
+
+python train_xmuda_with_VFM_mix.py --cfg=../VFM/configs/nuscenes_lidarseg/usa_singapore/xmuda_vfm_pl.yaml > training_logs/log_us_train_start_0000.txt 2>&1 &
+
+python train_xmuda_with_VFM_mix.py  --cfg=../VFM/configs/nuscenes_lidarseg/day_night/xmuda_vfm_pl.yaml > training_logs/log_day_train_start_0000.txt 2>&1 &
