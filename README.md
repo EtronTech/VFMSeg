@@ -2,7 +2,7 @@
 
 
 ## Citations
-Autors are: Jingyi Xu, Weidong Yang, Lingdong Kong, Youquan Liu, Rui Zhang, Qingyuan Zhou, Ben Fei.
+Authors are: Jingyi Xu, Weidong Yang, Lingdong Kong, Youquan Liu, Rui Zhang, Qingyuan Zhou, Ben Fei.
 The address of our paper: http://arxiv.org/abs/2403.10001 
 
 @article{xu2024VFMSeg,
