@@ -1,5 +1,20 @@
 # Visual Foundation Models Boost Cross-Modal Unsupervised Domain Adaptation for 3D Semantic Segmentation
-# Code Samples
+
+
+## Citations
+Autors are: Jingyi Xu, Weidong Yang, Lingdong Kong, Youquan Liu, Rui Zhang, Qingyuan Zhou, Ben Fei.
+The address of our paper: http://arxiv.org/abs/2403.10001 
+
+@article{xu2024VFMSeg,
+	title={Visual Foundation Models Boost Cross-Modal Unsupervised Domain Adaptation for 3D Semantic Segmentation},
+	author={Jingyi Xu, Weidong Yang, Lingdong Kong, Youquan Liu, Rui Zhang, Qingyuan Zhou, Ben Fei},
+	year={2024},
+	eprint={2403.10001},
+    journal={arXiv preprint arXiv:2403.10001}
+}
+
+
+## Code Samples
 
 ## VFMs
 We use released official code of [SAM](https://segment-anything.com/) and [SEEM](https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once) including their checkpoints (`sam_vit_h_4b8939.pth` for SAM, `seem_focall_v1.pt` for SEEM) for building our VFMSeg pipeline.
