@@ -2,16 +2,21 @@
 
 
 ## Citations
-Authors are: Jingyi Xu, Weidong Yang, Lingdong Kong, Youquan Liu, Rui Zhang, Qingyuan Zhou, Ben Fei.
-The address of our paper: http://arxiv.org/abs/2403.10001 
+Authors are: Jingyi Xu, Weidong Yang, Lingdong Kong, Youquan Liu, Qingyuan Zhou, Rui Zhang, Zhijun Li, Wen-Ming Chen, and Ben Fei.
+The address of our paper: https://ieeexplore.ieee.org/document/11083764
 
-@article{xu2024VFMSeg,
-	title={Visual Foundation Models Boost Cross-Modal Unsupervised Domain Adaptation for 3D Semantic Segmentation},
-	author={Jingyi Xu, Weidong Yang, Lingdong Kong, Youquan Liu, Rui Zhang, Qingyuan Zhou, Ben Fei},
-	year={2024},
-	eprint={2403.10001},
-    journal={arXiv preprint arXiv:2403.10001}
-}
+```
+@ARTICLE{11083764,
+  author={Xu, Jingyi and Yang, Weidong and Kong, Lingdong and Liu, Youquan and Zhou, Qingyuan and Zhang, Rui and Li, Zhijun and Chen, Wen-Ming and Fei, Ben},
+  journal={IEEE Transactions on Intelligent Transportation Systems}, 
+  title={Visual Foundation Models Boost Cross-Modal Unsupervised Domain Adaptation for 3D Semantic Segmentation}, 
+  year={2025},
+  volume={26},
+  number={11},
+  pages={20287-20301},
+  keywords={Three-dimensional displays;Point cloud compression;Visualization;Neural networks;Foundation models;Training;Semantics;Semantic segmentation;Autonomous vehicles;Accuracy;Unsupervised domain adaptation;cross-modal;3D semantic segmentation;visual foundation model},
+  doi={10.1109/TITS.2025.3587430}}
+```
 
 
 ## Code Samples
